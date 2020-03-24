@@ -4,6 +4,7 @@ import AddFriend from "./AddFriend";
 
 const Dashboard = () => {
     const [friendsData, setFriendsData] = useState([]);
+    const [fetch, setFetch] = useState(true);
 
     useEffect(() => {
         axiosWithAuth()
@@ -12,12 +13,12 @@ const Dashboard = () => {
             console.log(res.data);
             setFriendsData(res.data);
         })
-    }, [friendsData])
+    }, [fetch]);
 
     return (
         <div className = "dashboard">
             <h2>Dashboard</h2>
-            <AddFriend/>
+            <AddFriend fetch = {fetch} setFetch = {setFetch} />
             <div className = "allfriends">
             {friendsData.map(friend => (
                 <div id = {friend.id} className = "friend">

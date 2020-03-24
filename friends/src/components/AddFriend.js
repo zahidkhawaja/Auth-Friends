@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-const AddFriend = () => {
+const AddFriend = ({ fetch, setFetch }) => {
     const [newFriendData, setNewFriendData] = useState({
-        id: "",
         name: "",
         age: "",
         email: ""
@@ -21,6 +20,7 @@ const AddFriend = () => {
         axiosWithAuth()
         .post("/api/friends", newFriendData)
         .then(res => {
+            setFetch(!fetch);
             console.log(res);
             setNewFriendData({
                 id: "",

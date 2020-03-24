@@ -21,6 +21,20 @@
   height: 150px;
 }
 
+.friendform {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 10px;
+  margin: 15px;
+  height: 175px;
+  width: 300px;
+}
+
+.friendformdiv {
+  display: flex;
+  justify-content: center;
+}
+
 .allfriends {
   display: flex;
   justify-content: space-evenly;

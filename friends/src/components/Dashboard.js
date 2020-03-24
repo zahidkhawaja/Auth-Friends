@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import AddFriend from "./AddFriend";
 
 const Dashboard = () => {
     const [friendsData, setFriendsData] = useState([]);
@@ -11,11 +12,12 @@ const Dashboard = () => {
             console.log(res.data);
             setFriendsData(res.data);
         })
-    }, [])
+    }, [friendsData])
 
     return (
         <div className = "dashboard">
             <h2>Dashboard</h2>
+            <AddFriend/>
             <div className = "allfriends">
             {friendsData.map(friend => (
                 <div id = {friend.id} className = "friend">

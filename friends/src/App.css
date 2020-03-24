@@ -21,6 +21,21 @@
   height: 150px;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
+form input {
+  margin: 5px;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 5px;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
 .friendform {
   padding: 10px;
   margin: 15px;
@@ -38,6 +53,7 @@
   flex-direction: row-reverse;
   justify-content: space-evenly;
   flex-wrap: wrap-reverse;
+  margin-top: 50px;
 }
 
 .App-logo {

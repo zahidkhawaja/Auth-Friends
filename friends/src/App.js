@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
        <h1>Auth Friends</h1>
       </header>
+      <Login />
     </div>
   );
 }

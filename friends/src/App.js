@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -26,9 +27,7 @@ function App() {
           <Login/>
         </Route>
 
-        <Route exact path = "/dashboard">
-          <Dashboard/>
-        </Route>
+        <PrivateRoute exact path = "/dashboard" component = {Dashboard} />
 
       </Switch>
     </div>

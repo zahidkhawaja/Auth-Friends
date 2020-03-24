@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+.navigation a {
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,7 +22,7 @@ h1 {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #104abed5;
   height: 75px;
   display: flex;
   flex-direction: column;

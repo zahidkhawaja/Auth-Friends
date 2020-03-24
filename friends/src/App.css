@@ -12,6 +12,21 @@
   width: 30%;
 }
 
+.friend {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 10px;
+  margin: 15px;
+  width: 250px;
+  height: 150px;
+}
+
+.allfriends {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -23,7 +23,6 @@ const AddFriend = ({ fetch, setFetch }) => {
             setFetch(!fetch);
             console.log(res);
             setNewFriendData({
-                id: "",
                 name: "",
                 age: "",
                 email: ""

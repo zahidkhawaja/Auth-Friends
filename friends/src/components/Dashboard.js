@@ -21,8 +21,8 @@ const Dashboard = () => {
             <AddFriend fetch = {fetch} setFetch = {setFetch} />
             <div className = "allfriends">
             {friendsData.map(friend => (
-                <div id = {friend.id} className = "friend">
-                    <button id = {friend.id} className = "deletefriend" onClick = {() => axiosWithAuth().delete(`/api/friends/${friend.id}`).then(setFetch(!fetch))}>Delete</button>
+                <div key = {friend.id} className = "friend">
+                    <button key = {friend.id} className = "deletefriend" onClick = {() => axiosWithAuth().delete(`/api/friends/${friend.id}`).then(setFetch(!fetch))}>Delete</button>
                     <h3>{friend.name}</h3>
                     <p>Age: {friend.age}</p>
                     <p>Email: {friend.email}</p>
